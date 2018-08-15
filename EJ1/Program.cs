@@ -21,7 +21,7 @@ namespace EJ1
 
             //hola 
             //hola 2
-
+            //Colo gay
             //asdasd
             else if (numero == 2)
             {
