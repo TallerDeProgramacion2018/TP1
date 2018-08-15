@@ -33,7 +33,7 @@ namespace EJ2
                         break;
 
                 case 5: Console.Write(" CINCO");
-                break;
+                        break;
 
                 case 6: Console.Write(" SEIS");
                         break;
