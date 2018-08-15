@@ -16,7 +16,7 @@ namespace EJ1
 
             if (numero == 1)
             {
-                Console.WriteLine("El numero ingresado fue UNO");
+                Console.WriteLine("El numero ingresado fue UNO"); //esta mal
             }
             else if (numero == 2)
             {
