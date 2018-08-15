@@ -17,8 +17,9 @@ namespace EJ11
             double area = (Math.PI) * (Math.Pow(radio,2));
             double perimetro = 2 * (Math.PI) * (radio);
 
-            Console.WriteLine($"El area es: {area:0.00}");
-            Console.WriteLine($"El perimetro es: {perimetro:0.00}");
+            Console.WriteLine(" ");
+            Console.WriteLine($"    El area es: {area:0.00}");
+            Console.WriteLine($"    El perimetro es: {perimetro:0.00}");
 
             Console.Read();
 
