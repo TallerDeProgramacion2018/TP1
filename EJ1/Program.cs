@@ -18,6 +18,11 @@ namespace EJ1
             {
                 Console.WriteLine("El numero ingresado fue UNO");
             }
+
+            //hola 
+
+
+            //asdasd
             else if (numero == 2)
             {
                 Console.WriteLine("El numero ingresado fue DOS",numero);
