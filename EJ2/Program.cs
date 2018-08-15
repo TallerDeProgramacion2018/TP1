@@ -10,57 +10,30 @@ namespace EJ2
     {
         static void Main(string[] args)
         {
-            Console.Write("Ingrese valor: ");
-            string numeroIngresado = Console.ReadLine();
-            int numero = Convert.ToInt32(numeroIngresado);
+            Console.WriteLine("-PROGRAMA RECONOCEDOR- ");
+            Console.Write("Ingresar un valor: ");
 
-            switch (numero)
+            string valorIngresado = Console.ReadLine();
+            int numero = Convert.ToInt32(valorIngresado);   // Leo el valor ingresado y lo convierto a tipo entero.
+
+            Console.WriteLine();
+
+            switch (numero)  // Evalúo el número ingresado con estructura switch y imprimo en pantalla acorde a lo ingresado.
             {
-                case 1:
-                    Console.WriteLine("El numero ingresado fue UNO");
-                    break;
-
-                case 2:
-                    Console.WriteLine("El numero ingresado fue DOS");
-                    break;
-
-                case 3:
-                    Console.WriteLine("El numero ingresado fue TRES");
-                    break;
-
-                case 4:
-                    Console.WriteLine("El numero ingresado fue CUATRO");
-                    break;
-
-                case 5:
-                    Console.WriteLine("El numero ingresado fue CINCO");
-                    break;
-
-                case 6:
-                    Console.WriteLine("El numero ingresado fue SEIS");
-                    break;
-
-                case 7:
-                    Console.WriteLine("El numero ingresado fue SIETE");
-                    break;
-
-                case 8:
-                    Console.WriteLine("El numero ingresado fue OCHO");
-                    break;
-
-                case 9:
-                    Console.WriteLine("El numero ingresado fue NUEVE");
-                    break;
-
-                default:
-                    Console.WriteLine("El numero ingresado es OTRO");
-                    break;
-
+                case 1: Console.Write(" UNO"); break;
+                case 2: Console.Write(" DOS"); break;
+                case 3: Console.Write(" TRES"); break;
+                case 4: Console.Write(" CUATRO"); break;
+                case 5: Console.Write(" CINCO"); break;
+                case 6: Console.Write(" SEIS"); break;
+                case 7: Console.Write(" SIETE"); break;
+                case 8: Console.Write(" OCHO"); break;
+                case 9: Console.Write(" NUEVE"); break;
+                default: Console.Write(" OTRO"); break;
             }
-            Console.WriteLine(" ");
-            Console.WriteLine("Presione ENTER para continuar");
-            Console.ReadLine();
-            
+            Console.WriteLine();
+            Console.Write("Presione cualquier tecla para cerrar... ");
+            Console.ReadKey();
         }
     }
 }

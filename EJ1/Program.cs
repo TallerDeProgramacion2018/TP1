@@ -10,56 +10,61 @@ namespace EJ1
     {
         static void Main(string[] args)
         {
-            Console.Write("Ingrese valor: ");
-            string numeroIngresado = Console.ReadLine();
-            int numero = Convert.ToInt32(numeroIngresado);
 
-            if (numero == 1)
+            Console.WriteLine("-PROGRAMA RECONOCEDOR- ");
+            Console.Write(" Ingresar un valor: ");
+
+            string valorIngresado = Console.ReadLine();
+            int numero = Convert.ToInt32(valorIngresado); // Leo el valor ingresado y lo convierto a tipo entero.
+
+            Console.WriteLine();
+            Console.Write("Se reconoció: ");
+
+            if (numero == 1)  // Evalúo el número ingresado con estructura if-else y imprimo en pantalla acorde a lo ingresado.
             {
-                Console.WriteLine("El numero ingresado fue UNO"); //esta mal
+                Console.Write("UNO");
             }
-
-            //hola 
-            //hola 2
-            //Colo gay
-            //asdasd
             else if (numero == 2)
             {
-                Console.WriteLine("El numero ingresado fue DOS",numero);
+                Console.Write("DOS");
             }
             else if (numero == 3)
             {
-                Console.Write("El numero ingresado fue TRES", numero);
+                Console.Write("TRES");
             }
             else if (numero == 4)
             {
-                Console.WriteLine("El numero ingresado fue CUATRO",numero);
+                Console.Write("CUATRO");
             }
             else if (numero == 5)
             {
-                Console.WriteLine("El numero ingresado fuE CINCO",numero);
+                Console.Write("CINCO");
             }
             else if (numero == 6)
             {
-                Console.WriteLine("El numero ingresado fue SEIS",numero);
+                Console.Write("SEIS");
             }
             else if (numero == 7)
             {
-                Console.WriteLine("El numero ingresado fue SIETE",numero);
+                Console.Write("SIETE");
             }
             else if (numero == 8)
             {
-                Console.WriteLine("El numero ingresado fue OCHO",numero);
+                Console.Write("OCHO");
             }
             else if (numero == 9)
             {
-                Console.WriteLine("El numero ingresado fue NUEVE",numero);
+                Console.Write("NUEVE");
             }
             else
             {
-                Console.WriteLine("El numero ingresado fue es mayor que 9");
+                Console.Write("OTRO");
             }
-            Console.ReadLine();
+
+            Console.WriteLine();
+
+            Console.WriteLine("Presione un botón para salir.");
+            Console.ReadKey();
         }
     }
 }

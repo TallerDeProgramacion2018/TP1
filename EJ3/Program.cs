@@ -8,30 +8,29 @@ namespace EJ3
 {
     class Program
     {
+
+        public const int INFERIOR = 5;
+        public const int SUPERIOR = 100;    // Defino los límites como constantes.
+
         static void Main(string[] args)
         {
 
-            Console.Write("Ingrese limite inferior: ");
-            string numeroIngresado1 = Console.ReadLine();
-            int limiteInferior = Convert.ToInt32(numeroIngresado1);         Console.WriteLine(" ");
-
-            Console.Write("Ingrese limite superior: ");
-            string numeroIngresado2 = Console.ReadLine();
-            int limiteSuperior = Convert.ToInt32(numeroIngresado2);         Console.WriteLine(" ");
-
-            decimal promedio = (decimal)(limiteInferior + limiteSuperior) / (decimal) 2;
+            Console.WriteLine("EJ 3");
+            Decimal promedio = (decimal)(INFERIOR + SUPERIOR) / (decimal)2;     // Calculo el promedio.
 
             int suma = 0;
 
-            for ( ; limiteInferior <= limiteSuperior ; limiteInferior++)
+            for (int cont = INFERIOR; cont <= SUPERIOR; cont++)    // Sumo los elementos.
             {
-                suma += limiteInferior;
+                suma += cont;
             }
 
-            Console.WriteLine("Resultado de la suma: "+suma+" y el promedio es: "+promedio);
-            Console.WriteLine(" ");
-            Console.Write("Presione ENTER para continuar");
-            Console.ReadLine();
+            Console.WriteLine($"La suma es: {suma}");
+            Console.WriteLine($"El promedio es: {promedio:0.00}");      // Imprimo en pantalla los resultados.
+            Console.Write("Presione una tecla para continuar...");
+            Console.ReadKey();
+
+
         }
     }
 }
