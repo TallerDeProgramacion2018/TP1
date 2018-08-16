@@ -10,19 +10,22 @@ namespace EJ14
     {
         static void Main(string[] args)
         {
-            double[] vectorDeNumeros = new double[30];
+            Console.WriteLine("En base a 30 números aleatorios determinaremos su maximo, mínimo y su promedio.");
+
+            double[] vectorDeNumeros = new double[30];  // Inicializamos el arreglo y el objeto aleatorio.
             Random random = new Random();
             double promedio = 0;
             double suma = 0;
             double max = vectorDeNumeros[0];
-            double min = vectorDeNumeros[0];
 
-            for (int pos = 0; pos < vectorDeNumeros.Length; pos++)
+            for (int pos = 0; pos < vectorDeNumeros.Length; pos++)  // Completamos el arreglo con números aleatorios.
             {
                 vectorDeNumeros[pos] = random.NextDouble();
             }
 
-            for (int pos = 0; pos < vectorDeNumeros.Length; pos++)
+            double min = vectorDeNumeros[0];
+
+            for (int pos = 0; pos < vectorDeNumeros.Length; pos++) // Determinamos el máximo.
             {
                 if (vectorDeNumeros[pos] > max)
                 {
@@ -30,7 +33,7 @@ namespace EJ14
                 }
             }
 
-            for (int pos = 0; pos < vectorDeNumeros.Length; pos++)
+            for (int pos = 0; pos < vectorDeNumeros.Length; pos++) // Determinamos el mínimo.
             {
                 if (vectorDeNumeros[pos] < min)
                 {
@@ -38,17 +41,19 @@ namespace EJ14
                 }
             }
 
-            for (int pos = 0; pos < vectorDeNumeros.Length; pos++)
+            for (int pos = 0; pos < vectorDeNumeros.Length; pos++) // Determinamos la suma para calcular el promedio.
             {
-                suma += vectorDeNumeros[pos]; 
+                suma += vectorDeNumeros[pos];
             }
 
             promedio = suma / vectorDeNumeros.Length;
 
-            Console.WriteLine("El maximo es: " + max);
-            Console.WriteLine("El minimo es: " + min);
-            Console.WriteLine("El promedio es: " + promedio);
+            Console.WriteLine($"El maximo es:  {max:0.000}");
+            Console.WriteLine($"El minimo es:  {min:0.000}");
+            Console.WriteLine($"El promedio es: {promedio:0.000}");
 
+            Console.WriteLine();
+            Console.Write("Presione cualquier tecla para contiunar...");
             Console.ReadLine();
         }
     }

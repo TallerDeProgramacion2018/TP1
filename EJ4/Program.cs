@@ -4,34 +4,33 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EJ4
+namespace EJ04
 {
     class Program
     {
+        public const int INFERIOR = 5;
+        public const int SUPERIOR = 100;    // Defino los límites como constantes.
+
         static void Main(string[] args)
         {
-            Console.Write("Ingrese limite inferior: ");
-            string numeroIngresado1 = Console.ReadLine();
-            int limiteInferior = Convert.ToInt32(numeroIngresado1); Console.WriteLine(" ");
+            Console.WriteLine($"Las constantes son {INFERIOR} y {SUPERIOR}");
+            Console.WriteLine();
 
-            Console.Write("Ingrese limite superior: ");
-            string numeroIngresado2 = Console.ReadLine();
-            int limiteSuperior = Convert.ToInt32(numeroIngresado2); Console.WriteLine(" ");
-
-            decimal promedio = (decimal)(limiteInferior + limiteSuperior) / (decimal)2;
+            Decimal prom = (decimal)(INFERIOR + SUPERIOR) / 2; // Calculamos un promedio haciendo un casting de las variables para que las tome como números reales.
 
             int suma = 0;
+            int cont = INFERIOR;
 
-            while (limiteInferior <= limiteSuperior)
+            while (cont <= SUPERIOR)    // Calculo la suma con un contador auxiliar.
             {
-                suma += limiteInferior;
-                limiteInferior++;
+                suma += cont;
+                ++cont;
             }
 
-            Console.WriteLine("Resultado de la suma: " + suma + " y el promedio es: " + promedio);
-            Console.WriteLine(" ");
-            Console.Write("Presione ENTER para continuar");
-            Console.ReadLine();
+            Console.WriteLine($"La suma es: {suma}");
+            Console.WriteLine($"El promedio es: {prom:0.00}");
+            Console.Write("Presione una tecla para continuar...");
+            Console.ReadKey();
         }
     }
 }

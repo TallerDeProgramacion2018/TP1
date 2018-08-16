@@ -10,6 +10,9 @@ namespace EJ13
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Cadenas invertidas de forma descendente:");
+            Console.WriteLine();
+
             string palabraInvertida = "";
             string[] invertidas = new string[args.Length];
             int size = 0;
@@ -27,8 +30,8 @@ namespace EJ13
                 invertidas[i] = palabraInvertida;
             }
 
-            //ORDENAR VECTOR
-            for (int i = 0; i < invertidas.Length - 1; i++)
+            
+            for (int i = 0; i < invertidas.Length - 1; i++)     // Ordeno el vector mediante el método burbuja.
             {
                 for (int j = 0; j < invertidas.Length -1 - i; j++)
                 {

@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C1427BB4-CD41-4C6E-89E4-DF0652750779}</ProjectGuid>
+    <ProjectGuid>{69A8916E-368C-4E56-842B-19BC703E69C0}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>EJ15</RootNamespace>
-    <AssemblyName>EJ15</AssemblyName>
+    <RootNamespace>EJ16</RootNamespace>
+    <AssemblyName>EJ16</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>

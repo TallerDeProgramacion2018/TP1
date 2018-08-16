@@ -8,18 +8,24 @@ namespace EJ10
 {
     class Program
     {
+
+        public const int PRIMERANIO = 1900;     // Defino las constantes.
+        public const int SEGUNDOANIO = 2015;
+
         static void Main(string[] args)
         {
-            Console.WriteLine("Los años bisiestos comprendidos entre 1900 y 2015 son:");
-            for (int a= 1900; a <= 2015; a++)
+            Console.WriteLine($" - Años Bisiestos {PRIMERANIO}-{SEGUNDOANIO} -");
+            Console.WriteLine();
+
+            for (int i = 1900; i <= 2015; i++)      // Recorro los años con la sentencia for.
             {
-                if ((a % 4 == 0) && ((a % 100 != 0) || (a % 400 == 0)))
+                if ((i % 4 == 0) && (!(i % 100 == 0) || (i % 400 == 0)))    // Aplicando la formula lógica, evalúo si es bisiesto.
                 {
-                    Console.WriteLine(a);             
+                    Console.Write($"{i} ");       // Si lo es, lo imprimo en pantalla.
                 }
             }
 
-            Console.Read();
+            Console.ReadKey();
         }
     }
 }

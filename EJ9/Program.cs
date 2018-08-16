@@ -10,29 +10,30 @@ namespace EJ9
     {
         static void Main(string[] args)
         {
-            long resultado = 0;
-            bool estado;
+            Console.WriteLine("Primos entre 35 y 1977 incluídos:");
 
-            for (int n= 35; n <= 1977; n++)
+            bool primo;
+            int suma = 0;
+
+            for (int i = 35; i <= 1977; i++)  // Recorro los números con una sentencia for.
             {
-                estado = true;
-
-                for (int anterior = 2; anterior < n; anterior++)
+                primo = true;
+                for (int j = 2; ((primo) && (j < i)); j++)  // Para cada número 'i' evalua los divisores entre 2 y (i-1).
                 {
-                    if (n % anterior == 0)
+                    if (i % j == 0)
                     {
-                        estado = false;
+                        primo = false;      // Si encuentra un numero que pueda dividir a 'i', sabemos que no es primo.
                     }
                 }
-                
-                if (estado)
+                if (primo)
                 {
-                    resultado += n; 
-                } 
+                    suma += i;      // Acumulo los números primos.
+                }
             }
 
-            Console.WriteLine(resultado);
-            Console.Read();
+            Console.WriteLine();
+            Console.Write($"La suma de estos números es: {suma}");
+            Console.ReadKey();
         }
     }
 }

@@ -4,27 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EJ6
+namespace EJ06
 {
     class Program
     {
         static void Main(string[] args)
         {
-            int sumaDeImpares = 0;
+            Console.WriteLine("NUMEROS IMPARES:");
 
-            for (int i = 0; i <= 100; i++)
+            int cant = 0;
+            int sum = 0;
+
+            for (int contador = 1; contador < 100; contador++)
             {
-                if ((i % 2) == 0)
+                if (contador % 2 != 0)     // Compruebo que el número es impar (si se cumple que su resto de la division entre dos no es cero).
                 {
-                    sumaDeImpares += i;
+                    cant++;
+                    sum += contador;
                 }
             }
 
-            decimal promedio = (decimal) (1 + 100) / (decimal) 2;
-            Console.WriteLine("La suma es: " + sumaDeImpares + " y el promedio es: " + promedio);
-            Console.WriteLine(" ");
-            Console.WriteLine("Presione ENTER para continuar");
-            Console.ReadLine();
+            decimal prom = (decimal)sum / (decimal)cant;    // Calculo usando un casting de las variables.
+
+            Console.WriteLine($"La suma es: {sum}");
+            Console.WriteLine($"El promeido es: {prom:0.00}");
+            Console.Write("Presione una tecla para salir...");
+            Console.ReadKey();
         }
     }
 }

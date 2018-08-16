@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EJ3
+namespace EJ03
 {
     class Program
     {
@@ -15,7 +15,9 @@ namespace EJ3
         static void Main(string[] args)
         {
 
-            Console.WriteLine("EJ 3");
+            Console.WriteLine($"Las constantes son {INFERIOR} y {SUPERIOR}");
+            Console.WriteLine();
+
             Decimal promedio = (decimal)(INFERIOR + SUPERIOR) / (decimal)2;     // Calculo el promedio.
 
             int suma = 0;
@@ -29,8 +31,6 @@ namespace EJ3
             Console.WriteLine($"El promedio es: {promedio:0.00}");      // Imprimo en pantalla los resultados.
             Console.Write("Presione una tecla para continuar...");
             Console.ReadKey();
-
-
         }
     }
 }

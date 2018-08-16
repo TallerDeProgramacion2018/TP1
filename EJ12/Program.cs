@@ -10,20 +10,29 @@ namespace EJ12
     {
         static void Main(string[] args)
         {
-            Console.Write("Ingrese numero: ");          
-            string numIngresado = Console.ReadLine();
-            int num = Convert.ToInt32(numIngresado);
+            Console.Write(" Ingrese un número entero positivo: ");
+
+            string num = Console.ReadLine();
+            int numconv = Convert.ToInt32(num);     // Leo el número ingresado por pantalla y lo convierto a tipo entero.
+
+            Console.WriteLine();
 
             int factorial = 1;
 
-            for (int i = 1; i <= num; i++)
+            if (numconv == 0)       // Por definición, el factorial de 0 es 1.
             {
-                factorial *= i;
+                Console.WriteLine($"El resultado del factorial es: {factorial}");
+                Console.ReadKey();
             }
-
-            Console.Write(" ");
-            Console.WriteLine("El factorial del numero ingresado es: "+factorial);
-            Console.Read();
+            else
+            {
+                for (; numconv > 0; numconv--)  // Calculo el factorial mediante multiplicaciones sucesivas.
+                {
+                    factorial *= numconv;
+                }
+                Console.WriteLine($"El resultado del factorial es: {factorial}");
+                Console.ReadKey();
+            }
         }
     }
 }

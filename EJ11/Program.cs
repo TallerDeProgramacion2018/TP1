@@ -10,19 +10,25 @@ namespace EJ11
     {
         static void Main(string[] args)
         {
-            Console.Write("Iingrese el radio del circulo: ");
-            string num = Console.ReadLine();
-            double radio = Convert.ToDouble(num);
+            Console.Write(" Ingrese un número real: ");
+            string rea = Console.ReadLine();
+            double radio = Convert.ToDouble(rea);       // Leo la cadena escrita y la transformo a un número real.
 
-            double area = (Math.PI) * (Math.Pow(radio,2));
-            double perimetro = 2 * (Math.PI) * (radio);
+            Console.WriteLine();
 
-            Console.WriteLine(" ");
-            Console.WriteLine($"    El area es: {area:0.00}");
-            Console.WriteLine($"    El perimetro es: {perimetro:0.00}");
+            Console.WriteLine($" Siendo el radio de el circulo {radio:0.00}:");
 
-            Console.Read();
+            double area = Math.PI * Math.Pow(radio, 2);         // Calculo el área.
 
+            Console.WriteLine($" El área del circulo es: {area:0.000}");
+
+            double perimetro = 2 * Math.PI * radio;         // Calculo el perímetro
+
+            Console.WriteLine($" El perimetro del circulo es: {perimetro:0.000}");
+
+            Console.WriteLine();
+            Console.Write(" Presione cualquier tecla para continuar...");
+            Console.ReadKey();
         }
     }
 }

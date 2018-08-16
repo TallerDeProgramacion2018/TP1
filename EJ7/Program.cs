@@ -4,29 +4,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EJ7
+namespace EJ07
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.Write("Introduzca el numero de iteraciones que desea realizar: ");
-            string cantidadDeDecimales = Console.ReadLine();
-            int iteraciones = Convert.ToInt32(cantidadDeDecimales);
+            Console.WriteLine("Ingrese cantidad de términos:");
+            string cant = Console.ReadLine();
+            int cantConvertida = Convert.ToInt32(cant);     // Leo la cadena ingresada por patnalla y la convierto a tipo entero.
 
-            double aproxPI = 0;
-            
-            for (int n = 0; n <= iteraciones; n++)
+            double result = 0;
+
+            for (int i = 0; i <= cantConvertida; i++)    // Aplico la sumatoria.
             {
-                aproxPI += ((double) (Math.Pow(-1,n))) / ((double)(2 * n + 1));
+                result += ((double)(Math.Pow(-1, i)) / (double)(2 * i + 1));
             }
+            result *= 4;
 
-            aproxPI *= 4;
-            double error = (((double) (aproxPI)) / ((double) (Math.PI))) * (double) 100;
-            Console.WriteLine("El numero obtenido es: " + aproxPI);
-            Console.WriteLine(" ");
-            Console.WriteLine("El error es: " + error);
-            Console.Read();
+            Console.WriteLine($"La aproximación es: {result:0.000}");
+
+            double porcentaje = (result / Math.PI) * 100;
+
+            Console.Write($"Es un {porcentaje:0.00}");
+            Console.WriteLine(" porciento de el valor de Pi.");
+            Console.Write("Presione cualquier tecla para continuar...");
+            Console.ReadKey();
         }   
     }
 }

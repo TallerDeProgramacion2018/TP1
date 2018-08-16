@@ -8,65 +8,45 @@ namespace EJ15
 {
     class Program
     {
+
+        public const int INFERIOR = 20;
+        public const int SUPERIOR = 100;
+
+
         static void Main(string[] args)
         {
-            //Se pide al usuario que ingrese una de las palabras a evaluar
-            Console.WriteLine("Ingrese la primer palabra: ");
-            Console.WriteLine("");
-            string iPalabra1 = Console.ReadLine();
+            Console.WriteLine($"Números entre {INFERIOR} y {SUPERIOR} en forma ascendente:");
+            int[] arreglo = new int[10];
+            Random random = new Random();
 
-            //Se pide al usuario que ingrese la siguiente palabra a evaluar
-            Console.WriteLine("Ingrese la segunda palabra: ");
-            Console.WriteLine("");
-            string iPalabra2 = Console.ReadLine();
-
-            bool iAnagrama = false;
-
-            int i = 0;
-
-            if (iPalabra1.Length == iPalabra2.Length)
+            for (int pos = 0; pos < arreglo.Length; pos++)  // Completamos el arreglo con números aleatorios.
             {
-                while ((i+1) <= iPalabra1.Length) 
+                arreglo[pos] = random.Next(0, 200);
+            }
+
+            int aux;    // Ordenamos el arreglo mediante metodo burbuja para devolver la solucion de forma ascendente.
+            for (int a = 1; a < arreglo.Length; a++)
+                for (int b = arreglo.Length - 1; b >= a; b--)
                 {
-                    iAnagrama = false;
-
-                    for (int j = 0; (j < iPalabra2.Length) && (iAnagrama == false); j++)
+                    if (arreglo[b - 1] > arreglo[b])
                     {
-                        if (iPalabra1[i] == iPalabra2[j])
-                        {
-                            iPalabra1 = iPalabra1.Remove(i,1);
-                            iPalabra2 = iPalabra2.Remove(j,1);
-                            iAnagrama = true;                    
-                        }
-                        else
-                        {
-                            iAnagrama = false;
-                        }
-                    }
-
-                    if (iAnagrama == false)
-                    {
-                        i++;
+                        aux = arreglo[b - 1];
+                        arreglo[b - 1] = arreglo[b];
+                        arreglo[b] = aux;
                     }
                 }
 
-                if ((iPalabra1.Length == 0) && (iAnagrama == true))
-                {
-                    Console.WriteLine("Las palabras ingresadas son anagramas.");
-                    Console.ReadLine();
-                }
-                else
-                {
-                    Console.WriteLine("Las palabras ingresadas no son anagramas.");
-                    Console.ReadLine();
-                }
-            }
-            else
+            Console.WriteLine();
+
+            for (int i = 0; i < arreglo.Length; i++)  // Recorremos el vector imprimiendo los que se encuentran entre los límites. 
             {
-                Console.WriteLine("Las palabras ingresadas no son anagramas.");
-                Console.ReadLine();
+                if ((arreglo[i] >= INFERIOR) && (arreglo[i] <= SUPERIOR))
+                {
+                    Console.WriteLine(arreglo[i]);
+                }
             }
 
+            Console.ReadKey();
         }
     }
 }

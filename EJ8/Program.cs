@@ -4,28 +4,29 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace EJ8
+namespace EJ08
 {
     class Program
     {
         static void Main(string[] args)
         {
-            long siguiente = 0;
-            long primero = 0;
-            long segundo = 1;
+            Console.WriteLine("Primeros 50 elementos de la serie de Fibonacci:");
+            Console.WriteLine();
 
-            Console.WriteLine(primero);
-            Console.WriteLine(segundo);
+            long pri = 0;
+            long seg = 1;
 
-            for (int i = 0; i <= 48 ; i++)
+            Console.WriteLine(pri);
+            Console.WriteLine(seg);
+
+            for (int i = 0; i < 49; i++)    // Con una estructura for calculamos la serie.
             {
-                siguiente = primero + segundo;
-                Console.WriteLine(siguiente);
-                primero = segundo;
-                segundo = siguiente;
+                Console.WriteLine(pri + seg);
+                seg = pri + seg;
+                pri = seg - pri;
             }
 
-            Console.Read();
+            Console.ReadKey();
         }
     }
 }
